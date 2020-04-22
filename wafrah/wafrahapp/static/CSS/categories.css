@@ -1,0 +1,22 @@
+.categories-table {
+	margin-left: 20%;
+}
+
+.table-cell img {
+	width: 270px;
+	height: 150px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.table-cell {
+	box-shadow: 2px 2px 5px #9CA8B0;
+	border-radius: 5px;
+	border-color: red;
+}
+
+.cell-category-name{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	text-align: center;
+}
