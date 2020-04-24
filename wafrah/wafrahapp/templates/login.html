@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static '/CSS/common.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static '/CSS/login.css' %}">
+
+	</head>
+<header>
+	<div class="navbar">
+		<a href="#" class="logo bold">WAFRAH</a>
+	</div>
+</header>
+	<body>
+		<div id="login-view">
+
+		<h5 id="top-title">SIGN IN</h5>
+		<form <p>Email</p>
+			<input type="email" class="inputs" id="email" autocomplete="email">
+
+			<p>Password</p>
+			<input type="password" class="inputs" id="password" autocomplete="on">
+
+			<button id="signin-button" type="button" onclick="login()">SIGN IN</button>
+
+			<p id="new-user-label">Dont have an account?</p>
+
+			<button id="signup-button" type="button" onclick="location.href='signup'">SIGN UP</button>
+		</form>
+
+	</div>
+	</body>

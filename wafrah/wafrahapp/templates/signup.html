@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static '/CSS/common.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static '/CSS/signup.css' %}">
+
+	</head>
+<header>
+	<div class="navbar">
+		<a href="#" class="logo bold">WAFRAH</a>
+	</div>
+</header>
+	
+	<body>
+		<div id="signup-view">
+    
+        <h5 id="top-title">SIGN UP</h5>
+        <form>
+		 <p>Full Name</p>
+        <input type="text" class="inputs" id="fname">
+        
+        <p>Email</p>
+        <input type="email" class="inputs" id="email">
+        
+        <p>Password</p>
+        <input type="password" class="inputs" id="password">
+        
+        <p>Company</p>
+        <input type="text" class="inputs" id="company-input" placeholder="9665XXXXXXXX">
+        
+        <button id="signup-button" type="button" onclick="signup()">SIGN UP</button>
+        
+        <p id="members-label" style="text-align: center">Alraedy a member?</p>
+        
+        <button id="signin-button" type="button" onclick="location.href='login'">SIGN IN</button>
+        </form>
+        
+    </div>
+	</body>

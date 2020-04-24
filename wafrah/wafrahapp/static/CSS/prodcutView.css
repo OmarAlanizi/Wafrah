@@ -1,0 +1,149 @@
+h4 {
+	margin-bottom: 0px;
+}
+
+#currect-category {
+	margin-bottom: 10px;
+	margin-left: 10%;
+}
+
+#divider {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 15px;
+}
+
+#sub-category {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+#side-menu, #main {
+	display: inline-block;
+}
+
+#side-menu {
+	margin-left: 10%;
+	vertical-align: top;
+}
+
+.brands-label {
+	margin-bottom: 10px;
+}
+
+#price-from, #price-to {
+	width: 60px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #282828;
+	border-radius: 2px;
+	text-align: center;
+	height: 15px;
+}
+
+#price-arrow {
+	vertical-align: middle;
+}
+
+#price-from, #price-arrow, #price-to {
+	display: inline-block;
+}
+
+#main {
+	margin-left: 5%;
+}
+
+#filters-bar {
+	margin-left: 2%;
+	margin-right: 2.5%;
+}
+
+#filters-bar {
+	box-shadow: 2px 2px 5px #9CA8B0;
+	border-radius: 2px;
+}
+
+#filters-bar h6, .sorting-select {
+	display: inline-block;
+	margin: 15px;
+	margin-right: 25px;
+	margin-left: 2%;
+	vertical-align: middle;
+}
+
+#showed-results {
+	float: right;
+	margin-right: 5%;
+}
+
+.sorting-select {
+	outline: 0;
+  	background-color: white;
+  	border: 0.5px solid #fff;
+  	border-radius: 4px;
+  	display: inline-block;
+	font-size: 12px;
+  	line-height: 1.5em;
+  	padding-right: 3.5em;
+  	padding-left: 1em;
+	padding-top: 0px;
+	padding-bottom: 0px;
+  margin: 0;      
+	
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #fff, #fff);
+  background-position:
+    calc(100% - 20px) calc(1em - 5px),
+    calc(100% - 15px) calc(1em - 5px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+
+
+.table-cell img {
+	width: 270px;
+	height: 150px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.table-cell {
+	box-shadow: 2px 2px 5px #9CA8B0;
+	border-radius: 5px;
+	border-color: red;
+}
+
+.cell-product-name, .cell-product-price {
+	margin: 0px;
+	margin-left: 10px;
+}
+
+.cell-product-price, .cell-product-rating-bar {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.cell-product-rating-bar {
+	float: right;
+	margin-right: 10px;
+}
+
+.fa {
+	color: #9CA8B0;
+}
+
+.checked {
+  color: #282828;
+}

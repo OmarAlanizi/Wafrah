@@ -26,3 +26,9 @@ def categories(req):
 
 def productView(req):
     return render(req, 'productView.html')
+
+def login(req):
+    return render(req, 'login.html')
+
+def signup(req):
+    return render(req, 'signup.html')

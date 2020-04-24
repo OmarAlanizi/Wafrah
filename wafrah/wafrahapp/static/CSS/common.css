@@ -1,37 +1,37 @@
 {% load static %}
 @font-face {
   font-family: Montserrat;
-  src: url({% static 'media/font/Montserrat-Regular.ttf' %});
+  src: url({% static '/media/font/Montserrat-Regular.ttf' %});
 }
 
 @font-face {
   font-family: Montserrat-Black;
-  src: url({% static 'media/font/Montserrat-Black.ttf' %});
+  src: url({% static '/media/font/Montserrat-Black.ttf' %});
 }
 
 @font-face {
   font-family: Montserrat-Bold;
-  src: url({% static 'media/font/Montserrat-Bold.ttf' %});
+  src: url({% static '/media/font/Montserrat-Bold.ttf' %});
 }
 
 @font-face {
   font-family: Montserrat-Light;
-  src: url({% static 'media/font/Montserrat-Light.ttf' %});
+  src: url({% static '/media/font/Montserrat-Light.ttf' %});
 }
 
 @font-face {
   font-family: Montserrat-Medium;
-  src: url({% static 'media/font/Montserrat-Medium.ttf' %});
+  src: url({% static '/media/font/Montserrat-Medium.ttf' %});
 }
 
 @font-face {
   font-family: Montserrat-SemiBold;
-  src: url({% static 'media/font/Montserrat-SemiBold.ttf' %});
+  src: url({% static '/media/font/Montserrat-SemiBold.ttf' %});
 }
 
 @font-face {
   font-family: Montserrat-Thin;
-  src: url({% static 'media/font/Montserrat-Thin.ttf' %});
+  src: url({% static '/media/font/Montserrat-Thin.ttf' %});
 }
 
 html, body, form {
@@ -149,7 +149,7 @@ html, body, form {
 .search-button {
 	float: right;
 	padding-left: 11px;
-	background-image: url({% static 'Media/icons/white-search-icon.png' %});
+	background-image: url({% static '/Media/icons/white-search-icon.png' %});
 	border: none;
 	background-color: #42DC50;
 	background-size: contain;
@@ -167,7 +167,7 @@ html, body, form {
 .cart-button {
 	float: right;
 	padding-left: 15px;
-	background-image: url({% static 'Media/icons/cart.png' %});
+	background-image: url({% static '/Media/icons/cart.png' %});
 	border: none;
 	background-color: #1EF350;
 	background-size: contain;
