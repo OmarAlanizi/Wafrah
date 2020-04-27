@@ -17,20 +17,24 @@
 		<div id="signup-view">
     
         <h5 id="top-title">SIGN UP</h5>
-        <form>
-		 <p>Full Name</p>
-        <input type="text" class="inputs" id="fname">
-        
-        <p>Email</p>
-        <input type="email" class="inputs" id="email">
-        
-        <p>Password</p>
-        <input type="password" class="inputs" id="password">
-        
-        <p>Company</p>
-        <input type="text" class="inputs" id="company-input" placeholder="9665XXXXXXXX">
-        
-        <button id="signup-button" type="button" onclick="signup()">SIGN UP</button>
+        <form method="POST">
+
+            {% csrf_token %}
+            
+            {% for field in form %}
+                <p>
+                {{ field.label_tag }}<br>
+                {{ field }}
+                {% if field.help_text %}
+                    <p>{{ field.help_text }}</p>
+                {% endif %}
+                {% for error in field.errors %}
+                    <p style="color: red">{{ error }}</p>
+                {% endfor %}
+                </p>
+            {% endfor %}
+
+        <button id="signup-button" type="submit"">Sign Up!</button>
         
         <p id="members-label" style="text-align: center">Alraedy a member?</p>
         

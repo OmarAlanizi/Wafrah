@@ -1,15 +1,156 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% for item in items %}
-        <h1>Category:{{item.category}}</h1>
-        <p>Item Name:{{item.name}}</p>
-        <p>Amount available:{{item.amount}}</p>
-    {% endfor %}
-</body>
-</html>
+<link rel="stylesheet" type="text/css" href="{% static '/CSS/common.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static '/CSS/index.css' %}">
+
+	</head>
+<header>
+	<div class="navbar">
+        <a href="/" class="logo bold">WAFRAH</a>
+        {% if request.session.company_id %}
+            <a href="logout">Logout</a>
+             <p>
+                 Welcome {{company.company_name}}!
+			 </p>
+		{% elif request.session.supplier_id %}
+		<a href="/logout">Logout</a>
+			<p>
+				Welcome {{supplier.supplier_name}}!
+			</p>
+        {% else %}
+            <a href="company/login">Company Login</a>
+            <a href="company/signup">Company Register</a>
+			
+			<a href="supplier/login">Supplier Login</a>
+            <a href="supplier/signup">Supplier Register</a>
+        {% endif %}
+	</div>
+</header>
+	<body>
+		<div id="top-section">
+		<img src="{% static '/Media/images/warehousing.jpg' %}" width="100%;" style="object-fit: cover; opacity: 0.4;">
+		<div class="centered">
+		<p id="title">Get All of Your Store's<br>Needs from One Place!</p>
+		<p>WAFRAH delivers equipments and goods<br>for supermarkets, restaurants, coffee
+		shops,<br> and every retail store and much more.</p>
+		
+		</div>
+		</div>
+		<div id="why">
+		<p style="text-align: center;">Why choose <span style="font-family: Montserrat-bold">WAFRAH</span></p>
+		<div class="horizontal-line"></div>
+		<p style="text-align: left; margin-left: 25%; margin-right: 25%;"><span style="font-family: Montserrat-Semibold">WAFRAH</span> is a platform that connects startup companies and businesses to wholesalers and equipment vendors. It aims to help startups find the best equipment fast and easy. Making one unified communication line between biusnesses to reduce the burden of managments and financial departments; Which will increase your business's productivity and help you foucs on excelling in your field!</p>
+		<div class="horizontal-line"></div>
+		</div>
+		<div id="features">
+			<div id="feature1">
+				<div class="feature-icon">
+					<img src="{% static '/Media/icons/zap-2.svg' %}" width="50px">
+				</div>
+				<div class="feature-desc">
+					<p><span style="font-family: Montserrat-Semibold">Fast & Intuitive</span>
+					<br>
+						Explore thousands of
+						<br>
+						equipment and products.
+						<br>
+						Reorder from your history
+						<br>
+						in one-click!
+					</p>
+				</div>
+			</div>
+			<div id="feature2">
+				<div class="feature-icon">
+					<img src="{% static '/Media/icons/idea.svg' %}" width="35px;">
+				</div>
+				<div class="feature-desc">
+					<p><span style="font-family: Montserrat-Semibold">Find The Right Equipment</span>
+					<br>
+						With detailed specifications and
+						<br>
+						special orders; you can get the
+						<br>
+						equipment tailored and delivered
+						<br>
+						to you.
+					</p>
+				</div>
+			</div>
+			<div id="feature3">
+				<div class="feature-icon">
+					<img src="{% static '/Media/icons/unlock-2.svg' %}" width="45px" >
+				</div>
+				<div class="feature-desc">
+					<p><span style="font-family: Montserrat-Semibold">Access Hundreds of Vendors</span>
+					<br>
+						Gain access to WAFRAH's huge
+						<br>
+						inventory and get storage refill
+						<br>
+						predictions and suggestions.
+						<br> <br>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="packages">
+			<div id="basic" class="card">
+				<h6 class="card-title">BASIC PACKAGE</h6>
+				<div class="package-icon">
+					<img src="{% static '/Media/icons/free.svg' %}">
+				</div>
+				<h5 class="package-cost">99 SAR/Month</h5>
+				<div class="package-features">
+					<ul>
+						<li>Access thousands of products</li>
+						<li>Make custom orders</li>
+						<li>Track orders</li>
+					</ul>
+				</div>
+				<br>
+				<button class="order-button">START 14 DAYS FREE TRIAL</button>
+			</div>
+			<div id="big" class="card">
+				<h6 class="card-title">BUSINESS PACKAGE</h6>
+				<div class="package-icon">
+					<img src="{% static '/Media/icons/business.svg' %}">
+				</div>
+				<h5 class="package-cost">299 SAR/Month</h5>
+				<div class="package-features">
+					<ul>
+						<li>Startup Package +:</li>
+						<li>Create unlimited users</li>
+						<li>Manage users access</li>
+						<li>24/7 Technical support</li>
+					</ul>
+				</div>
+				<button class="order-button">START 14 DAYS FREE TRIAL</button>
+			</div>
+			<div id="start-ups" class="card">
+				<h6 class="card-title">STARTUP PACKAGE</h6>
+				<div class="package-icon">
+				<img src="{% static '/Media/icons/startup.svg' %}">
+				</div>
+				<h5 class="package-cost">199 SAR/Month</h5>
+				<div class="package-features">
+					<ul>
+						<li>Basic Package +:</li>
+						<li>Create up to 5 users</li>
+						<li>Smart reorder suggestions</li>
+						<li>Financial and storage reports</li>
+					</ul>
+				</div>
+				
+				<button class="order-button">START 14 DAYS FREE TRIAL</button>
+			</div>
+		
+		</div>
+		<div id="login">
+			<h5>Already a user?</h5>
+			<button id="login-button" type="button" onclick="location.href='company/login'">Login</button>
+		</div>
+	</body>

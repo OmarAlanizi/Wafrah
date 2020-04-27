@@ -1,0 +1,284 @@
+{% load static %}
+.logo {
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#body-content {
+	margin-top: 50px;
+	margin-left: 5%;
+	margin-right: 4%;
+}
+
+
+table {
+	border: 3px solid #9CA8B0AA;
+	border-bottom: none;
+}
+
+#orders-status,
+#financial-records {
+	display: inline-grid;
+}
+
+#pending-orders-label {
+	margin-left: 10px;
+}
+
+#confirmed-orders-label {
+	margin-left: 100px;
+}
+
+#revision-orders-label {
+	margin-left: 130px;
+}
+
+#print {
+	background-color: #42DC50;
+	border: none;
+	float: right;
+	width: 100px;
+	height: 19px;
+	box-shadow: 1px 3px 5px 0px #9CA8B0;
+	outline: 0;
+	font-family: Montserrat-Semibold;
+	font-size: 12px;
+}
+
+#pending-orders-label,
+#pending-orders,
+#confirmed-orders-label,
+#confirmed-orders,
+#revision-orders-label,
+#revision-orders,
+#print-pending-orders {
+	display: inline;
+}
+
+caption,
+tfoot {
+	background-color: #9CA8B0AA;
+	height: 50px;
+}
+
+.col {
+	border-right: 0.5px;
+	border-right-style: solid;
+	border-color: #282828;
+	border-bottom: 0.5px;
+	border-bottom-style: solid;
+	text-align: center;
+}
+
+#orders-table-header {
+	width: 747px;
+	text-align: center;
+	background-color: #9CA8B0AA;
+	font-family: Montserrat-Semibold;
+}
+
+.acc {
+	background-image: url({% static '/Media/icons/check.svg' %});
+	width: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+	border: none;
+	vertical-align: middle;
+	outline: 0;
+}
+
+.rep {
+	background-image: url({% static '/Media/icons/reply.svg' %});
+	width: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+	border: none;
+	vertical-align: middle;
+	outline: 0;
+}
+
+.rej {
+	background-image: url({% static '/Media/icons/cancel.svg' %});
+	width: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+	border: none;
+	vertical-align: middle;
+	outline: 0;
+}
+
+.order-no-col {
+	width: 120px;
+}
+
+.order-req-col {
+	width: 170px;
+}
+
+.order-date-col {
+	width: 90px;
+}
+
+.order-by-col {
+	width: 90px;
+}
+
+.order-status-col {
+	width: 150px;
+}
+
+.order-edit-col {
+	width: 90px;
+	border-right: none;
+}
+
+#orders-table-footer {
+	width: 747px;
+	background-color: #9CA8B0AA;
+	margin-bottom: 15px;
+}
+
+#smart-header {
+	width: 555px;
+	text-align: center;
+	background-color: #9CA8B0AA;
+	font-family: Montserrat-Semibold;
+}
+
+#smart-table {
+	border: 3px solid #9CA8B0AA;
+
+}
+
+#tracking-table-header {
+	width: 652px;
+	text-align: center;
+	background-color: #9CA8B0AA;
+	font-family: Montserrat-Semibold;
+}
+
+.tracking-no-col {
+	width: 100px;
+}
+
+.tracking-location-col {
+	width: 170px;
+}
+
+.tracking-date-col {
+	width: 90px;
+}
+
+.tracking-status-col {
+	width: 90px;
+}
+
+.tracking-arriving-col {
+	width: 170px;
+	border-right: none;
+}
+
+#tracking-table-footer {
+	width: 652px;
+	background-color: #9CA8B0AA;
+	margin-bottom: 15px;
+}
+
+#track-orders,
+#orders-history {
+	display: inline-grid;
+}
+
+.history-no-col {
+	width: 100px;
+}
+
+.history-req-col {
+	width: 170px;
+}
+
+.history-date-col {
+	width: 90px;
+}
+
+.history-by-col {
+	width: 90px;
+}
+
+.history-arriving-col {
+	width: 170px;
+	border-right: none;
+}
+
+#history-table-footer {
+	width: 652px;
+	background-color: #9CA8B0AA;
+	margin-bottom: 15px;
+}
+
+#financial-table-header {
+	width: 477px;
+	text-align: center;
+	background-color: #9CA8B0AA;
+	font-family: Montserrat-Semibold;
+}
+
+.fin-no-col {
+	width: 100px;
+}
+
+.fin-req-col {
+	width: 170px;
+}
+
+.fin-date-col {
+	width: 90px;
+}
+
+.fin-total-col {
+	width: 90px;
+	border-right: none;
+}
+
+#financial-table-footer {
+	width: 477px;
+	background-color: #9CA8B0AA;
+	margin-bottom: 15px;
+}
+
+#manage-users {
+	height: 147px;
+	width: 100%;
+	background-color: #9CA8B0AA;
+	text-align: center;
+}
+
+#logout {
+	margin-top: 11px;
+	height: 147px;
+	width: 650px;
+	background-color: #9CA8B0AA;
+	text-align: center;
+	color: red;
+	margin-left: 6px;
+}
+
+#add-product {
+	margin-top: 11px;
+	height: 147px;
+	width: 650px;
+	background-color: #9CA8B0AA;
+	text-align: center;
+}
+
+#logout, #add-product {
+	display: inline-grid;
+}
+
+#account {
+	margin-bottom: 100px;
+}

@@ -1,0 +1,454 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static '/CSS/common.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static '/CSS/wholesaler_dashbaord.css' %}">
+
+</head>
+<header>
+	<div id="topBar">
+		<ul id="topBarList">
+			<li id="dashboard-store-Item"><a>Store</a></li>
+			<li id="supportItem"><a>Request IT Support</a></li>
+		</ul>
+	</div>
+	<div class="navbar">
+		<a href="/" class="logo bold">WAFRAH</a>
+	</div>
+</header>
+
+<body>
+	<div id="body-content">
+		<div id="orders-status">
+			<div id="orders-table-header">Pending Orders & Status</div>
+			<table>
+
+				<tbody>
+					<tr>
+						<td class="order-no-col col">Order no.</td>
+						<td class="order-req-col col">Request</td>
+						<td class="order-date-col col">Date</td>
+						<td class="order-by-col col">By</td>
+						<td class="order-status-col col">Status</td>
+						<td class="order-edit-col col">Action</td>
+					</tr>
+
+					<tr>
+						<td class="order-no-col col">AB123456</td>
+						<td class="order-req-col col">XX of Product</td>
+						<td class="order-date-col col">xx/xx/2020</td>
+						<td class="order-by-col col">Khalid</td>
+						<td class="order-status-col col">Confirmed</td>
+						<td class="order-edit-col col">
+							<button class="acc"></button>
+							<button class="rep"></button>
+							<button class="rej"></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="order-no-col col">AB123456</td>
+						<td class="order-req-col col">XX of Product</td>
+						<td class="order-date-col col">xx/xx/2020</td>
+						<td class="order-by-col col">Khalid</td>
+						<td class="order-status-col col">Confirmed</td>
+						<td class="order-edit-col col">
+							<button class="acc"></button>
+							<button class="rep"></button>
+							<button class="rej"></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="order-no-col col">AB123456</td>
+						<td class="order-req-col col">XX of Product</td>
+						<td class="order-date-col col">xx/xx/2020</td>
+						<td class="order-by-col col">Khalid</td>
+						<td class="order-status-col col">Confirmed</td>
+						<td class="order-edit-col col">
+							<button class="acc"></button>
+							<button class="rep"></button>
+							<button class="rej"></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="order-no-col col">AB123456</td>
+						<td class="order-req-col col">XX of Product</td>
+						<td class="order-date-col col">xx/xx/2020</td>
+						<td class="order-by-col col">Khalid</td>
+						<td class="order-status-col col">Confirmed</td>
+						<td class="order-edit-col col">
+							<button class="acc"></button>
+							<button class="rep"></button>
+							<button class="rej"></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="order-no-col col">AB123456</td>
+						<td class="order-req-col col">XX of Product</td>
+						<td class="order-date-col col">xx/xx/2020</td>
+						<td class="order-by-col col">Khalid</td>
+						<td class="order-status-col col">Confirmed</td>
+						<td class="order-edit-col col">
+							<button class="acc"></button>
+							<button class="rep"></button>
+							<button class="rej"></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="order-no-col col">AB123456</td>
+						<td class="order-req-col col">XX of Product</td>
+						<td class="order-date-col col">xx/xx/2020</td>
+						<td class="order-by-col col">Khalid</td>
+						<td class="order-status-col col">Confirmed</td>
+						<td class="order-edit-col col">
+							<button class="acc"></button>
+							<button class="rep"></button>
+							<button class="rej"></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="order-no-col col">AB123456</td>
+						<td class="order-req-col col">XX of Product</td>
+						<td class="order-date-col col">xx/xx/2020</td>
+						<td class="order-by-col col">Khalid</td>
+						<td class="order-status-col col">Confirmed</td>
+						<td class="order-edit-col col">
+							<button class="acc"></button>
+							<button class="rep"></button>
+							<button class="rej"></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="order-no-col col">AB123456</td>
+						<td class="order-req-col col">XX of Product</td>
+						<td class="order-date-col col">xx/xx/2020</td>
+						<td class="order-by-col col">Khalid</td>
+						<td class="order-status-col col">Confirmed</td>
+						<td class="order-edit-col col">
+							<button class="acc"></button>
+							<button class="rep"></button>
+							<button class="rej"></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="order-no-col col">AB123456</td>
+						<td class="order-req-col col">XX of Product</td>
+						<td class="order-date-col col">xx/xx/2020</td>
+						<td class="order-by-col col">Khalid</td>
+						<td class="order-status-col col">Confirmed</td>
+						<td class="order-edit-col col">
+							<button class="acc"></button>
+							<button class="rep"></button>
+							<button class="rej"></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="order-no-col col">AB123456</td>
+						<td class="order-req-col col">XX of Product</td>
+						<td class="order-date-col col">xx/xx/2020</td>
+						<td class="order-by-col col">Khalid</td>
+						<td class="order-status-col col">Confirmed</td>
+						<td class="order-edit-col col">
+							<button class="acc"></button>
+							<button class="rep"></button>
+							<button class="rej"></button>
+						</td>
+					</tr>
+					
+				</tbody>
+
+			</table>
+			<div id="orders-table-footer">
+				<h5 id="pending-orders-label">Pending Orders: </h5>
+				<h5 id="pending-orders"> 5 </h5>
+
+				<h5 id="confirmed-orders-label">Confirmed Orders: </h5>
+				<h5 id="confirmed-orders"> 1 </h5>
+
+				<h5 id="revision-orders-label">Needs Revision: </h5>
+				<h5 id="revision-orders"> 1 </h5>
+
+				<button id="print">Print</button>
+			</div>
+		</div>
+		<div id="financial-records">
+			<div id="financial-table-header">Financial Records</div>
+			<table>
+
+				<tbody>
+					<tr>
+						<td class="fin-no-col col">Order no.</td>
+						<td class="fin-req-col col">Request</td>
+						<td class="fin-date-col col">Date</td>
+						<td class="fin-total-col col">Total</td>
+					</tr>
+					<tr>
+						<td class="fin-no-col col">AB123456</td>
+						<td class="fin-req-col col">XX of Product</td>
+						<td class="fin-date-col col">xx/xx/20xx</td>
+						<td class="fin-total-col col">100.00 SAR</td>
+					</tr>
+					<tr>
+						<td class="fin-no-col col">AB123456</td>
+						<td class="fin-req-col col">XX of Product</td>
+						<td class="fin-date-col col">xx/xx/20xx</td>
+						<td class="fin-total-col col">100.00 SAR</td>
+					</tr>
+					<tr>
+						<td class="fin-no-col col">AB123456</td>
+						<td class="fin-req-col col">XX of Product</td>
+						<td class="fin-date-col col">xx/xx/20xx</td>
+						<td class="fin-total-col col">100.00 SAR</td>
+					</tr>
+					<tr>
+						<td class="fin-no-col col">AB123456</td>
+						<td class="fin-req-col col">XX of Product</td>
+						<td class="fin-date-col col">xx/xx/20xx</td>
+						<td class="fin-total-col col">100.00 SAR</td>
+					</tr>
+					<tr>
+						<td class="fin-no-col col">AB123456</td>
+						<td class="fin-req-col col">XX of Product</td>
+						<td class="fin-date-col col">xx/xx/20xx</td>
+						<td class="fin-total-col col">100.00 SAR</td>
+					</tr>
+					<tr>
+						<td class="fin-no-col col">AB123456</td>
+						<td class="fin-req-col col">XX of Product</td>
+						<td class="fin-date-col col">xx/xx/20xx</td>
+						<td class="fin-total-col col">100.00 SAR</td>
+					</tr>
+					<tr>
+						<td class="fin-no-col col">AB123456</td>
+						<td class="fin-req-col col">XX of Product</td>
+						<td class="fin-date-col col">xx/xx/20xx</td>
+						<td class="fin-total-col col">100.00 SAR</td>
+					</tr>
+					<tr>
+						<td class="fin-no-col col">AB123456</td>
+						<td class="fin-req-col col">XX of Product</td>
+						<td class="fin-date-col col">xx/xx/20xx</td>
+						<td class="fin-total-col col">100.00 SAR</td>
+					</tr>
+					<tr>
+						<td class="fin-no-col col">AB123456</td>
+						<td class="fin-req-col col">XX of Product</td>
+						<td class="fin-date-col col">xx/xx/20xx</td>
+						<td class="fin-total-col col">100.00 SAR</td>
+					</tr>
+					<tr>
+						<td class="fin-no-col col">AB123456</td>
+						<td class="fin-req-col col">XX of Product</td>
+						<td class="fin-date-col col">xx/xx/20xx</td>
+						<td class="fin-total-col col">100.00 SAR</td>
+					</tr>
+
+				</tbody>
+
+			</table>
+			<div id="financial-table-footer">
+				<h5 id="pending-orders-label"> </h5>
+				<button id="print">Print</button>
+			</div>
+		</div>
+		<div id="track-orders">
+			<div id="tracking-table-header">Track Orders</div>
+			<table>
+
+				<tbody>
+					<tr>
+						<td class="tracking-no-col col">Order no.</td>
+						<td class="tracking-location-col col">Location</td>
+						<td class="tracking-date-col col">Date</td>
+						<td class="tracking-status-col col">Status</td>
+						<td class="tracking-arriving-col col">Estimated Arr. Date</td>
+					</tr>
+
+					<tr>
+						<td class="tracking-no-col col">AB123456</td>
+						<td class="tracking-location-col col">Riyadh, Postal Off.</td>
+						<td class="tracking-date-col col">xx/xx/20xx</td>
+						<td class="tracking-status-col col">Customs</td>
+						<td class="tracking-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="tracking-no-col col">AB123456</td>
+						<td class="tracking-location-col col">Riyadh, Postal Off.</td>
+						<td class="tracking-date-col col">xx/xx/20xx</td>
+						<td class="tracking-status-col col">Customs</td>
+						<td class="tracking-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="tracking-no-col col">AB123456</td>
+						<td class="tracking-location-col col">Riyadh, Postal Off.</td>
+						<td class="tracking-date-col col">xx/xx/20xx</td>
+						<td class="tracking-status-col col">Customs</td>
+						<td class="tracking-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="tracking-no-col col">AB123456</td>
+						<td class="tracking-location-col col">Riyadh, Postal Off.</td>
+						<td class="tracking-date-col col">xx/xx/20xx</td>
+						<td class="tracking-status-col col">Customs</td>
+						<td class="tracking-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="tracking-no-col col">AB123456</td>
+						<td class="tracking-location-col col">Riyadh, Postal Off.</td>
+						<td class="tracking-date-col col">xx/xx/20xx</td>
+						<td class="tracking-status-col col">Customs</td>
+						<td class="tracking-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="tracking-no-col col">AB123456</td>
+						<td class="tracking-location-col col">Riyadh, Postal Off.</td>
+						<td class="tracking-date-col col">xx/xx/20xx</td>
+						<td class="tracking-status-col col">Customs</td>
+						<td class="tracking-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="tracking-no-col col">AB123456</td>
+						<td class="tracking-location-col col">Riyadh, Postal Off.</td>
+						<td class="tracking-date-col col">xx/xx/20xx</td>
+						<td class="tracking-status-col col">Customs</td>
+						<td class="tracking-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="tracking-no-col col">AB123456</td>
+						<td class="tracking-location-col col">Riyadh, Postal Off.</td>
+						<td class="tracking-date-col col">xx/xx/20xx</td>
+						<td class="tracking-status-col col">Customs</td>
+						<td class="tracking-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="tracking-no-col col">AB123456</td>
+						<td class="tracking-location-col col">Riyadh, Postal Off.</td>
+						<td class="tracking-date-col col">xx/xx/20xx</td>
+						<td class="tracking-status-col col">Customs</td>
+						<td class="tracking-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="tracking-no-col col">AB123456</td>
+						<td class="tracking-location-col col">Riyadh, Postal Off.</td>
+						<td class="tracking-date-col col">xx/xx/20xx</td>
+						<td class="tracking-status-col col">Customs</td>
+						<td class="tracking-arriving-col col">xx/xx/20xx</td>
+					</tr>
+
+				</tbody>
+
+			</table>
+			<div id="tracking-table-footer">
+				<h5 id="pending-orders-label"> </h5>
+				<button id="print">Print</button>
+			</div>
+		</div>
+		<div id="orders-history">
+			<div id="tracking-table-header">Orders History</div>
+			<table>
+
+				<tbody>
+					<tr>
+						<td class="history-no-col col">Order no.</td>
+						<td class="history-req-col col">Request</td>
+						<td class="history-date-col col">Date</td>
+						<td class="history-by-col col">By</td>
+						<td class="history-arriving-col col">Arr. Date</td>
+					</tr>
+
+					<tr>
+						<td class="history-no-col col">AB123456</td>
+						<td class="history-req-col col">XX of Product</td>
+						<td class="history-date-col col">xx/xx/20xx</td>
+						<td class="history-by-col col">Khalid</td>
+						<td class="history-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="history-no-col col">AB123456</td>
+						<td class="history-req-col col">XX of Product</td>
+						<td class="history-date-col col">xx/xx/20xx</td>
+						<td class="history-by-col col">Khalid</td>
+						<td class="history-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="history-no-col col">AB123456</td>
+						<td class="history-req-col col">XX of Product</td>
+						<td class="history-date-col col">xx/xx/20xx</td>
+						<td class="history-by-col col">Khalid</td>
+						<td class="history-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="history-no-col col">AB123456</td>
+						<td class="history-req-col col">XX of Product</td>
+						<td class="history-date-col col">xx/xx/20xx</td>
+						<td class="history-by-col col">Khalid</td>
+						<td class="history-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="history-no-col col">AB123456</td>
+						<td class="history-req-col col">XX of Product</td>
+						<td class="history-date-col col">xx/xx/20xx</td>
+						<td class="history-by-col col">Khalid</td>
+						<td class="history-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="history-no-col col">AB123456</td>
+						<td class="history-req-col col">XX of Product</td>
+						<td class="history-date-col col">xx/xx/20xx</td>
+						<td class="history-by-col col">Khalid</td>
+						<td class="history-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="history-no-col col">AB123456</td>
+						<td class="history-req-col col">XX of Product</td>
+						<td class="history-date-col col">xx/xx/20xx</td>
+						<td class="history-by-col col">Khalid</td>
+						<td class="history-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="history-no-col col">AB123456</td>
+						<td class="history-req-col col">XX of Product</td>
+						<td class="history-date-col col">xx/xx/20xx</td>
+						<td class="history-by-col col">Khalid</td>
+						<td class="history-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="history-no-col col">AB123456</td>
+						<td class="history-req-col col">XX of Product</td>
+						<td class="history-date-col col">xx/xx/20xx</td>
+						<td class="history-by-col col">Khalid</td>
+						<td class="history-arriving-col col">xx/xx/20xx</td>
+					</tr>
+					<tr>
+						<td class="history-no-col col">AB123456</td>
+						<td class="history-req-col col">XX of Product</td>
+						<td class="history-date-col col">xx/xx/20xx</td>
+						<td class="history-by-col col">Khalid</td>
+						<td class="history-arriving-col col">xx/xx/20xx</td>
+					</tr>
+
+
+				</tbody>
+
+			</table>
+			<div id="history-table-footer">
+				<h5 id="pending-orders-label"> </h5>
+				<button id="print">Print</button>
+			</div>
+		</div>	
+		<div id="account">
+			<div id="add-product">
+				<br>
+				<h5><a href="/add_product">Add Product</a></h5>
+			</div>
+			<div id="logout">
+				<br>
+				<h5><a href="/logout">Logout</a></h5>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

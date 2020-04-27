@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static '/CSS/common.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static '/CSS/add_product.css' %}">
+
+</head>
+<header>
+	<div class="navbar">
+		<a href="/" class="logo bold">WAFRAH</a>
+	</div>
+</header>
+
+<body>
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div id="user-image">
+			<img src="https://img.icons8.com/plasticine/100/000000/user.png"/>
+			<div id="image-buttons">
+				<button id="download-image-button"></button>
+				<button id="delete-image-button"></button>
+			</div>
+		</div>
+		<br>
+            {% for field in form %}
+                <div>
+                {{ field.label_tag }}<br>
+                {{ field }}
+                {% if field.help_text %}
+                    <p>{{ field.help_text }}</p>
+                {% endif %}
+                {% for error in field.errors %}
+                    <p style="color: red">{{ error }}</p>
+                {% endfor %}
+				</div>
+            {% endfor %}
+		
+		<div id="action-buttons">
+			<button id="cancel-button" type="button" onclick="location.href='/'">Cancel</button>
+			<button id="add-button" type='submit' >Add</button>
+			
+		</div>
+	</div>
+</body>

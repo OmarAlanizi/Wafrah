@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dcf9d7;
+      }
+
+      .cls-2 {
+        fill: #42dc50;
+      }
+    </style>
+  </defs>
+  <g id="Icon" transform="translate(-197 -203)">
+    <path id="Path_223" data-name="Path 223" class="cls-1" d="M50,0A50,50,0,1,1,0,50,50,50,0,0,1,50,0Z" transform="translate(197 203)"/>
+    <path id="Path_201" data-name="Path 201" class="cls-2" d="M80,0V50l35.375,35.375A50.028,50.028,0,0,0,80,0Z" transform="translate(167 203)"/>
+  </g>
+</svg>

@@ -16,13 +16,24 @@
 		<div id="login-view">
 
 		<h5 id="top-title">SIGN IN</h5>
-		<form <p>Email</p>
-			<input type="email" class="inputs" id="email" autocomplete="email">
+		<form method="POST">
 
-			<p>Password</p>
-			<input type="password" class="inputs" id="password" autocomplete="on">
+            {% csrf_token %}
+            
+            {% for field in form %}
+                <p>
+                {{ field.label_tag }}<br>
+                {{ field }}
+                {% if field.help_text %}
+                    <p>{{ field.help_text }}</p>
+                {% endif %}
+                {% for error in field.errors %}
+                    <p style="color: red">{{ error }}</p>
+                {% endfor %}
+                </p>
+            {% endfor %}
 
-			<button id="signin-button" type="button" onclick="login()">SIGN IN</button>
+			<button id="signin-button" type="submit">Sign IN!</button>
 
 			<p id="new-user-label">Dont have an account?</p>
 
