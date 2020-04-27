@@ -17,16 +17,9 @@
 <body>
 	<form method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
-		<div id="user-image">
-			<img src="https://img.icons8.com/plasticine/100/000000/user.png"/>
-			<div id="image-buttons">
-				<button id="download-image-button"></button>
-				<button id="delete-image-button"></button>
-			</div>
-		</div>
 		<br>
             {% for field in form %}
-                <div>
+                <div style="margin: 0 auto; width: 25%;">
                 {{ field.label_tag }}<br>
                 {{ field }}
                 {% if field.help_text %}

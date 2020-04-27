@@ -8,7 +8,8 @@ class Permission(models.Model):
 class SupplierProducts(models.Model):
     product_name = models.CharField(max_length=256)
     product_specs = models.CharField(max_length=256)
-    product_image = models.ImageField(verbose_name='product_image',upload_to='products/', default = 'pic_folder/None/no-img.jpg', null=True, blank=True)
+    product_image = models.ImageField(verbose_name='product_image',upload_to='products/',default = 'pic_folder/None/no-img.jpg', null=True, blank=True)
+    product_price = models.DecimalField(decimal_places=2, max_digits=6)
 
 class Product(models.Model):
     product_name = models.ForeignKey(SupplierProducts, on_delete=models.DO_NOTHING)

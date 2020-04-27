@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 from . import views
 
@@ -14,4 +16,4 @@ urlpatterns = [
     path('retailer_dashboard', views.retailer_dashboard, name='retailer_dashboard'),
     path('wholesaler_dashboard', views.wholesaler_dashboard, name='wholesaler_dashboard'),
     path('add_product', views.add_product, name='add_product'),
-]
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

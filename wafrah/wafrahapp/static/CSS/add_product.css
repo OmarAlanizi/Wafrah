@@ -1,3 +1,4 @@
+{% load static %}
 .logo {
 	width: 100%;
 	vertical-align: middle;
@@ -67,7 +68,7 @@
 }
 
 #download-image-button {
-	background-image: url(/Media/icons/download.svg);
+	background-image: url('/Media/icons/download.svg');
 	background-repeat: no-repeat;
 	width: 24px;
 	height: 30px;
@@ -79,7 +80,7 @@
 
 #delete-image-button {
 	background-color: transparent;
-	background-image: url(/Media/icons/cancel.svg);
+	background-image: url('/Media/icons/cancel.svg')}
 	background-repeat: no-repeat;
 	width: 24px;
 	height: 34px;

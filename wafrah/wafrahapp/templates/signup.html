@@ -9,7 +9,7 @@
 	</head>
 <header>
 	<div class="navbar">
-		<a href="#" class="logo bold">WAFRAH</a>
+		<a href="/" class="logo bold">WAFRAH</a>
 	</div>
 </header>
 	
@@ -39,6 +39,12 @@
         <p id="members-label" style="text-align: center">Alraedy a member?</p>
         
         <button id="signin-button" type="button" onclick="location.href='login'">SIGN IN</button>
+
+        {% if 'company' in request.path %}
+        <button id="signup-button" type="button" onclick="location.href='/supplier/signup'">Suppliers Area</button>
+        {% else %}
+        <button id="signup-button" type="button" onclick="location.href='/company/signup'">Company Area</button>
+        {% endif %}  
         </form>
         
     </div>

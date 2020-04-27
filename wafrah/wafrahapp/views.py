@@ -134,7 +134,12 @@ def manage_user(request):
     return render(request, 'manage_user.html')
 
 def product_view(request):
-    return render(request, 'product_view.html')
+    suppliers = Supplier.objects.all()
+    products = []
+    for supplier in suppliers:
+        if supplier.products.count()>0:
+            products.append(supplier.products.all())
+    return render(request, 'product_view.html',{'products':products})
 
 def retailer_dashboard(request):
     context = {}
@@ -174,10 +179,12 @@ def add_product(request):
         if form.is_valid():
             product_name  = form.cleaned_data["product_name"]
             product_specs  = form.cleaned_data["product_specs"]
+            product_price  = form.cleaned_data["product_price"]
             # product_image  = form.cleaned_data["product_image"]
             product = SupplierProducts(
                 product_name=product_name,
                 product_specs=product_specs,
+                product_price=product_price,
             )
             product.product_image = request.FILES["product_image"]
             # product = SupplierProducts.objects.create(
@@ -186,11 +193,14 @@ def add_product(request):
             #     product_image=product_image,
             # )
             product.save()
+            supplier = Supplier.objects.get(pk=request.session['supplier_id'])
+            supplier.products.add(product)
             return redirect('index')
     print("not valid")
-    # image = SupplierProducts.objects.get(pk=5).product_image
+    # image = SupplierProducts.objects.get(pk=8).product_image
     # print(image.url)
-    print(request.FILES)
-    return render(request, 'add_product.html', {'form': form})
+    # print(request.FILES)
+    image = 'test'
+    return render(request, 'add_product.html', {'form': form, 'image':image})
 
     

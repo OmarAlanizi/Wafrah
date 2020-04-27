@@ -12,6 +12,12 @@ def test():
         product_amount="10 Litres",
         product_price=99.32)
     product2.save()
+    
+    product3 = Product(
+        product_name="Plastic Straws",
+        product_amount="100 Pieces",
+        product_price=20)
+    product3.save()
 
     company = Company.objects.get(company_name="test")
     # supplier = Supplier(
@@ -21,19 +27,13 @@ def test():
     supplier = Supplier.objects.get(supplier_name="ses")
     supplier.products.add(product1)
     supplier.products.add(product2)
+    supplier.products.add(product3)
 
-    test_acc = Account(
-        email="test_email@test.com",
-        username="test_acc",
-        company=company,
-    )
-    test_acc.save()
 
     order1 = Order(
         company=company,
         supplier=supplier,
         status="Sent",
-        order_by=test_acc
     )
     order1.save()
     order1.products.add(product1)

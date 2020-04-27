@@ -10,12 +10,12 @@
 <header>
 <div id="topBar">
 	<ul id="topBarList">
-		<li id="dashboardItem"><a>Dashbard</a></li>
+		<li id="dashboardItem"><a href="/">Dashbard</a></li>
 		<li id="supportItem"><a>Request IT Support</a></li>
 	</ul>
 	</div>	
 	<div class="navbar">
-		<a href="#" class="logo bold">WAFRAH</a>
+		<a href="/" class="logo bold">WAFRAH</a>
 		<div class="search">
 			<form>
 				<input type="text" placeholder="Search.." name="search" class="search-input">
@@ -67,233 +67,26 @@
 			<option value="6">Rating Low</option>
 		</select>
 		
-		<h6 id="showed-results">Showing 1-15 of 150 Results</h6>
+		<!-- <h6 id="showed-results">Showing 1-15 of 150 Results</h6> -->
 	</div>
 	<div id="content">
 	<table cellspacing="20">
 		<tr class="table-row"> 
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		</tr>
 		
-		<tr class="table-row"> 
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
+		{% for product in products %}
+		{% for p in product %}
+			<td class="table-cell">
+				<img src="{{ MEDIA_URL }}{{p.product_image.url}}">
+				<div class="cell-prodcut-info">
+				<h5 class="cell-product-name">{{p.product_name}}</h5>
+				<h6 class="cell-product-price">{{p.product_price}} SAR/Unit</h6>
+				<div >{{p.product_specs}}
+					</div>
 				</div>
-			</div>
-		</td>
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		</tr>
+			</td>
+		{% endfor %}
+	{% endfor %}
 		
-		<tr class="table-row"> 
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		</tr>
-		
-		<tr class="table-row"> 
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		</tr>
-		
-		<tr class="table-row"> 
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
-		<td class="table-cell">
-			<img src="{% static '/Media/images/tina-guina-obV_LM0KjxY-unsplash.jpg' %}">
-			<div class="cell-prodcut-info">
-			<h5 class="cell-product-name">Product Name</h5>
-			<h6 class="cell-product-price">100.00 SAR/Unit</h6>
-			<div class="cell-product-rating-bar">
-			<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star checked"></span>
-				<span class="fa fa-star"></span>
-				<span class="fa fa-star"></span>
-				</div>
-			</div>
-		</td>
 		</tr>
 		</table>
 	

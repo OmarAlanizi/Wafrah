@@ -38,6 +38,12 @@
 			<p id="new-user-label">Dont have an account?</p>
 
 			<button id="signup-button" type="button" onclick="location.href='signup'">SIGN UP</button>
+
+			{% if 'company' in request.path %}
+			<button id="signin-button" type="button" onclick="location.href='/supplier/login'">Suppliers Area</button>
+			{% else %}
+			<button id="signin-button" type="button" onclick="location.href='/company/login'">Company Area</button>
+			{% endif %} 
 		</form>
 
 	</div>

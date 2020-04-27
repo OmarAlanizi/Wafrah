@@ -63,10 +63,11 @@ class ProductForm(forms.Form):
     product_name = forms.CharField(widget=forms.Textarea(attrs={'class':'text-area', 'placeholder':'Product name'}))
     product_specs = forms.CharField(widget=forms.Textarea(attrs={'class':'text-area', 'placeholder':'Product description'}))
     product_image = forms.ImageField()
-    
+    product_price = forms.DecimalField(decimal_places=2, max_digits=6, min_value=0.01)
+
     class Meta:
         model = SupplierProducts
-        fields = ('product_name', 'product_specs', 'product_image')
+        fields = ('product_name', 'product_specs', 'product_image', 'product_price')
     # def __init__(self, *args, **kwargs):
     #     super(ProductForm, self).__init__(*args, **kwargs)
     #     self.fields['product_image'].required = False

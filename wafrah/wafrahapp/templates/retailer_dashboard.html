@@ -18,7 +18,7 @@
 <header>
 <div id="topBar">
 	<ul id="topBarList">
-		<li id="dashboard-store-Item"><a>Store</a></li>
+		<li id="dashboard-store-Item"><a href="product_view">View Store Products</a></li>
 		<li id="supportItem"><a>Request IT Support</a></li>
 	</ul>
 	</div>	
@@ -36,7 +36,6 @@
 						<td class="order-no-col col">Order no.</td>
 						<td class="order-req-col col">Request</td>
 						<td class="order-date-col col">Date</td>
-						<td class="order-by-col col">By</td>
 						<td class="order-status-col col">Status</td>
 						<td class="order-edit-col col">
 							<button class="edit"></button>
@@ -44,45 +43,71 @@
 					</tr>
 					{% for order in orders%}
 						{% for product in order.products.all %}
-							<tr>
+							<tr>{}
 								<td class="order-no-col col">{{order.id}}</td>
 								<td class="order-req-col col">{{product.product_amount}} of {{product.product_name}}</td>
 								<td class="order-date-col col">{{order.created}}</td>
-								<td class="order-by-col col">{{order.order_by.username}}</td>
 								<td class="order-status-col col">{{order.status}}</td>
 								<td class="order-edit-col col">
 									<button class="edit"></button>
 								</td>
 							</tr>
 						{% endfor %}
-
 					{% endfor %}
-
-
-
 
 					<tr>
 						<td class="order-no-col col">AB123456</td>
-						<td class="order-req-col col">XX of Product</td>
-						<td class="order-date-col col">xx/xx/2020</td>
-						<td class="order-by-col col">Khalid</td>
+						<td class="order-req-col col">100 Litres of Milk</td>
+						<td class="order-date-col col">10/4/2020</td>
 						<td class="order-status-col col">Confirmed</td>
 						<td class="order-edit-col col">
 							<button class="edit"></button>
 						</td>
 					</tr>
+					
+					<tr>
+						<td class="order-no-col col">AB123457</td>
+						<td class="order-req-col col">10 Kilograms of Coffee</td>
+						<td class="order-date-col col">11/4/2020</td>
+						<td class="order-status-col col">Sent to Retailer</td>
+						<td class="order-edit-col col">
+							<button class="edit"></button>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="order-no-col col">AB123458</td>
+						<td class="order-req-col col">100 Pieces plastic cutlery set</td>
+						<td class="order-date-col col">11/4/2020</td>
+						<td class="order-status-col col">Sent to Retailer</td>
+						<td class="order-edit-col col">
+							<button class="edit"></button>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="order-no-col col">AB123459</td>
+						<td class="order-req-col col">100 Cardboard Boxes</td>
+						<td class="order-date-col col">12/4/2020</td>
+						<td class="order-status-col col">Sent to Retailer</td>
+						<td class="order-edit-col col">
+							<button class="edit"></button>
+						</td>
+					</tr>
+
+
 					</tbody>
 					
 				</table>
 				<div id="orders-table-footer">
 					<h5 id="pending-orders-label">Pending Orders: </h5>
-					<h5 id="pending-orders"> 5 </h5>
+					<h5 id="pending-orders"> 3 </h5>
 					
 					<h5 id="confirmed-orders-label">Confirmed Orders: </h5>
 					<h5 id="confirmed-orders"> 1 </h5>
 					
 					<h5 id="revision-orders-label">Needs Revision: </h5>
-					<h5 id="revision-orders"> 1 </h5>
+					<h5 id="revision-orders"> 0 </h5>
 					
 					<button id="print">Print</button>
 				</div>
